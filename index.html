@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martin Valdiviezo | Flutter Developer</title>
+  <meta name="description" content="Portafolio de Martin Valdiviezo Nuñez, desarrollador Flutter con experiencia en aplicaciones móviles, web y WordPress." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════ NAV ════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-brand">
+      <span class="brand-dot"></span>
+      <span class="brand-name">Martin V.</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Inicio</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">Sobre mí</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Experiencia</a></li>
+      <li><a href="#education" class="nav-link" data-section="education">Formación</a></li>
+      <li><a href="#projects-personal" class="nav-link" data-section="projects-personal">Proyectos</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contacto</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Disponible para nuevos proyectos</div>
+      <h1 class="hero-title">
+        Hola, soy<br />
+        <span class="gradient-text" id="typed-name">Martin Valdiviezo</span>
+      </h1>
+      <p class="hero-subtitle">Flutter Developer · Mobile · Web</p>
+      <p class="hero-description">
+        Bachiller en Ingeniería de Software con experiencia en desarrollo móvil con Flutter,
+        personalización WordPress y aplicaciones Android. Enfocado en buenas prácticas,
+        arquitectura limpia y experiencias de usuario de calidad.
+      </p>
+      <div class="hero-actions">
+        <a href="#experience" class="btn btn-primary">Ver experiencia</a>
+        <a href="#contact" class="btn btn-ghost">Contáctame</a>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ ABOUT ════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-label">Sobre mí</div>
+      <h2 class="section-title">¿Quién soy?</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Bachiller en Ingeniería de Software por la Universidad Tecnológica del Perú.
+            Cuento con conocimientos sólidos en desarrollo Front-End de aplicaciones web
+            y móviles utilizando Flutter, así como experiencia en personalización de sitios
+            en WordPress.
+          </p>
+          <p>
+            Me adapto rápidamente a nuevos entornos de trabajo, aplico buenas prácticas de
+            desarrollo y poseo un nivel básico de inglés. He trabajado en proyectos de
+            desarrollo de software tanto en el sector público como privado, destacando por
+            mi iniciativa, responsabilidad y aprendizaje continuo.
+          </p>
+          <div class="about-skills">
+            <span class="skill-tag">Flutter / Dart</span>
+            <span class="skill-tag">Android Studio</span>
+            <span class="skill-tag">HTML5 / CSS / JS</span>
+            <span class="skill-tag">WordPress</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Hive (DB local)</span>
+            <span class="skill-tag">GetX</span>
+            <span class="skill-tag">SQL Server</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Años de experiencia</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Empleos completados</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Sectores: público y privado</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="2">0</div>
+            <div class="stat-label">Certificaciones</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ EXPERIENCE ════════════════════ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-label">Experiencia</div>
+      <h2 class="section-title">Experiencia profesional</h2>
+      <div class="timeline">
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Junior Flutter Developer</h3>
+                <div class="timeline-org">Corporación ABBEY</div>
+              </div>
+              <div class="timeline-badge degree">Más reciente</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> Oct 2024 – Abr 2025
+            </div>
+            <p class="timeline-desc">
+              Desarrollo de interfaces móviles en Flutter con diseño limpio y responsive.
+              Implementación de gestión de ventas, historial de productos, búsqueda inteligente
+              y filtros personalizados. Integración de Hive (DB local) y Firestore.
+              Arquitectura GetX y consumo eficiente de APIs.
+            </p>
+            <div class="timeline-tags">
+              <span>Flutter</span><span>Dart</span><span>GetX</span><span>Hive</span><span>Firestore</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Desarrollador WordPress Junior</h3>
+                <div class="timeline-org">Consigue Ventas</div>
+              </div>
+              <div class="timeline-badge master">Web</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> Jun 2024 – Oct 2024
+            </div>
+            <p class="timeline-desc">
+              Instalación, configuración y personalización de plugins en WordPress.
+              Creación de temas desde cero con Elementor y desarrollo de sitios con
+              diseño responsive adaptado a móviles, tabletas y escritorio.
+            </p>
+            <div class="timeline-tags">
+              <span>WordPress</span><span>Elementor</span><span>CSS</span><span>Responsive</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Programador Junior (2ª etapa)</h3>
+                <div class="timeline-org">Municipalidad Provincial de Piura</div>
+              </div>
+              <div class="timeline-badge cert">Gobierno</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> Ene 2024 – Abr 2024
+            </div>
+            <p class="timeline-desc">
+              Actualización y modificación de la app móvil existente. Integración de nuevas
+              APIs con funcionalidades ampliadas y pruebas con el servidor Firebase de Google.
+            </p>
+            <div class="timeline-tags">
+              <span>Android Studio</span><span>Firebase</span><span>APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Programador Junior (1ª etapa)</h3>
+                <div class="timeline-org">Municipalidad Provincial de Piura</div>
+              </div>
+              <div class="timeline-badge course">Gobierno</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> Ene 2023 – Mar 2023
+            </div>
+            <p class="timeline-desc">
+              Desarrollo Front-End en Android Studio, integración de APIs y pruebas
+              locales y con servidor local de la aplicación móvil institucional.
+            </p>
+            <div class="timeline-tags">
+              <span>Android Studio</span><span>Java</span><span>APIs</span><span>Front-End</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ EDUCATION ════════════════════ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-label">Formación</div>
+      <h2 class="section-title">Educación y certificaciones</h2>
+      <div class="timeline">
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Bachiller en Ingeniería de Software</h3>
+                <div class="timeline-org">Universidad Tecnológica del Perú (UTP)</div>
+              </div>
+              <div class="timeline-badge degree">Grado</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> Mar 2018 – Dic 2024
+            </div>
+            <p class="timeline-desc">
+              Formación en desarrollo de software, estructuras de datos, bases de datos,
+              ingeniería de requisitos y metodologías ágiles.
+            </p>
+            <div class="timeline-tags">
+              <span>Ingeniería de Software</span><span>POO</span><span>Bases de datos</span><span>Scrum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Certificado Microsoft Excel Nivel Intermedio</h3>
+                <div class="timeline-org">Universidad Tecnológica del Perú (UTP)</div>
+              </div>
+              <div class="timeline-badge cert">Certificación</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> 2022
+            </div>
+            <p class="timeline-desc">
+              Manejo avanzado de hojas de cálculo, fórmulas, tablas dinámicas y análisis de datos en Excel.
+            </p>
+            <div class="timeline-tags">
+              <span>Excel</span><span>Ofimática</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-title">Inglés Nivel Básico</h3>
+                <div class="timeline-org">Universidad Tecnológica del Perú (UTP)</div>
+              </div>
+              <div class="timeline-badge course">Idioma</div>
+            </div>
+            <div class="timeline-period">
+              <span class="period-icon">📅</span> 2021
+            </div>
+            <p class="timeline-desc">
+              Comprensión lectora y vocabulario técnico en inglés aplicado a documentación de software.
+            </p>
+            <div class="timeline-tags">
+              <span>Inglés</span><span>Lectura técnica</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ PROYECTOS PROPIOS ════════════════════ -->
+  <section id="projects-personal" class="section">
+    <div class="container">
+      <div class="section-label">Proyectos</div>
+      <h2 class="section-title">Proyectos personales</h2>
+      <p class="section-subtitle">
+        Aplicaciones y sitios construidos para explorar tecnologías y demostrar habilidades.
+      </p>
+      <div class="projects-grid" id="personal-projects-grid">
+
+        <div class="project-card featured" data-animate>
+          <div class="featured-badge">Destacado</div>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#6366f1,#8b5cf6);">
+              <span class="project-icon">📱</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn">Ver proyecto →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Flutter</span><span>Dart</span><span>Hive</span><span>Firestore</span>
+            </div>
+            <h3 class="project-name">App de Gestión de Ventas</h3>
+            <p class="project-desc">
+              Aplicación móvil con historial de productos, búsqueda inteligente, filtros
+              personalizados y sincronización entre base de datos local (Hive) y Firestore.
+            </p>
+            <div class="project-links">
+              <a href="#" class="plink" id="proj-p1-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-animate>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#0ea5e9,#06b6d4);">
+              <span class="project-icon">🌐</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn">Ver proyecto →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>WordPress</span><span>Elementor</span><span>CSS</span>
+            </div>
+            <h3 class="project-name">Sitio Web Corporativo</h3>
+            <p class="project-desc">
+              Sitio responsive construido con WordPress y Elementor: tema personalizado,
+              plugins configurados y optimización para todos los dispositivos.
+            </p>
+            <div class="project-links">
+              <a href="#" class="plink" id="proj-p2-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-animate>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#f59e0b,#ef4444);">
+              <span class="project-icon">🔐</span>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="project-link-btn">Ver proyecto →</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span>Flutter</span><span>GetX</span><span>Firebase Auth</span>
+            </div>
+            <h3 class="project-name">Flujo de Autenticación Flutter</h3>
+            <p class="project-desc">
+              Módulo de login, registro y gestión de usuarios con GetX y Firebase Auth,
+              siguiendo buenas prácticas de arquitectura limpia.
+            </p>
+            <div class="project-links">
+              <a href="#" class="plink" id="proj-p3-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ════════════════════ CONTACT ════════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-label">Contacto</div>
+      <h2 class="section-title">¿Hablamos?</h2>
+      <p class="section-subtitle">
+        Estoy disponible para proyectos freelance, colaboraciones o simplemente
+        para tomar un café virtual.
+      </p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" id="contact-email">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">e.valdiviezosoft@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-phone">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Teléfono</div>
+              <div class="contact-value">+51 986 777 534</div>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <div class="contact-value">linkedin.com/in/enrique-valdiviezo-610b4a318</div>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Ubicación</div>
+              <div class="contact-value">Piura, Perú</div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <input type="text" id="subject" placeholder="¿En qué puedo ayudarte?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit">
+            Enviar mensaje ✈️
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ ¡Mensaje enviado! Te responderé pronto.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════ FOOTER ════════════════════ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-dot"></span>
+        <span>Martin Valdiviezo 2026 — Hecho con ❤️</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Inicio</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#education">Formación</a>
+        <a href="#projects-personal">Proyectos</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
