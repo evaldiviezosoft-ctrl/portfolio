@@ -146,26 +146,81 @@ function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
   setTimeout(type, 600);
 })();
 
-/* ── CONTACT FORM ── */
-function handleForm(e) {
+/* ── CONTACT FORM (Web3Forms) ── */
+async function handleForm(e) {
   e.preventDefault();
-  const btn = document.getElementById('form-submit');
+
+  const btn     = document.getElementById('form-submit');
   const success = document.getElementById('formSuccess');
+  const error   = document.getElementById('formError');
 
   btn.disabled = true;
   btn.textContent = 'Enviando…';
+  if (error)   error.style.display   = 'none';
+  if (success) success.style.display = 'none';
 
-  // Simulate async send (replace with real fetch to your backend/Formspree)
-  setTimeout(() => {
-    btn.textContent = '¡Enviado! ✅';
-    success.style.display = 'block';
-    document.getElementById('contactForm').reset();
-    setTimeout(() => {
-      btn.disabled = false;
-      btn.textContent = 'Enviar mensaje ✈️';
-      success.style.display = 'none';
-    }, 4000);
-  }, 1400);
+  const formData = new FormData(e.target);
+
+  // Capturar valores antes de que se resetee el formulario
+  const nombre         = formData.get('name')   || '';
+  const emailRemitente = formData.get('email')  || '';
+  const asunto         = formData.get('asunto') || '';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      btn.textContent = '¡Enviado! ✅';
+      if (success) success.style.display = 'block';
+      e.target.reset();
+
+      // Notificación WhatsApp (no bloquea el flujo principal)
+      notifyWhatsApp(nombre, emailRemitente, asunto);
+
+      setTimeout(() => {
+        btn.disabled    = false;
+        btn.textContent = 'Enviar mensaje ✈️';
+        if (success) success.style.display = 'none';
+      }, 5000);
+    } else {
+      throw new Error(data.message || 'Error al enviar');
+    }
+  } catch (err) {
+    btn.disabled    = false;
+    btn.textContent = 'Enviar mensaje ✈️';
+    if (error) {
+      error.textContent = '❌ No se pudo enviar el mensaje. Inténtalo de nuevo.';
+      error.style.display = 'block';
+    }
+  }
+}
+
+/* ── WHATSAPP NOTIFY (CallMeBot) ──────────────────────────────
+   Pasos para activar (solo una vez):
+   1. Envía por WhatsApp al +34 644 60 14 99:
+      "I allow callmebot to send me messages"
+   2. Recibirás tu apikey. Reemplaza YOUR_CALLMEBOT_APIKEY abajo.
+──────────────────────────────────────────────────────────── */
+async function notifyWhatsApp(nombre, emailRemitente, asunto) {
+  const phone  = '51986777534';           // tu número sin + ni espacios
+  const apikey = 'YOUR_CALLMEBOT_APIKEY'; // ← reemplaza con tu key
+
+  if (apikey === 'YOUR_CALLMEBOT_APIKEY') return;
+
+  const texto = `📬 Nuevo contacto en tu portafolio!%0ADe: ${encodeURIComponent(nombre)} (${encodeURIComponent(emailRemitente)})%0AAsunto: ${encodeURIComponent(asunto)}`;
+  const url   = `https://api.callmebot.com/whatsapp.php?phone=${phone}&text=${texto}&apikey=${apikey}`;
+
+  try {
+    // mode:'no-cors' evita el error CORS desde el navegador
+    await fetch(url, { method: 'GET', mode: 'no-cors' });
+  } catch (_) {
+    // silencioso — WA es notificación secundaria
+  }
 }
 
 /* ── SMOOTH CARD TILT (subtle 3D) ── */
