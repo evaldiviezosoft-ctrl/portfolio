@@ -240,3 +240,38 @@ document.querySelectorAll('.project-card, .client-card, .stat-card').forEach(car
     setTimeout(() => card.style.transition = '', 500);
   });
 });
+
+/* ── PROJECT MODAL ── */
+function openModal(id) {
+  const backdrop = document.getElementById('modal-' + id);
+  if (!backdrop) return;
+  backdrop.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  const backdrop = document.getElementById('modal-' + id);
+  if (!backdrop) return;
+  backdrop.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close on backdrop click (outside panel)
+document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+  backdrop.addEventListener('click', (e) => {
+    if (e.target === backdrop) {
+      backdrop.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-backdrop.open').forEach(m => {
+      m.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  }
+});

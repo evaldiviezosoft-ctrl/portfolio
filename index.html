@@ -379,11 +379,132 @@
           </div>
         </div>
 
+        <!-- ══ CONTROLGASTOS CARD ══ -->
+        <div class="project-card project-card--gold featured" data-animate id="card-controlgastos">
+          <div class="featured-badge featured-badge--gold">Destacado</div>
+          <div class="mobile-badge">
+            <span>📱 Mobile</span>
+          </div>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#1A1B1F,#0B0B0C); border-bottom: 1px solid rgba(212,175,55,0.25);">
+              <span class="project-icon">💰</span>
+              <div class="project-gold-glow"></div>
+            </div>
+            <div class="project-overlay project-overlay--gold">
+              <button class="project-link-btn project-link-btn--gold" onclick="openModal('controlgastos')">Ver detalles →</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags project-tags--gold">
+              <span>Flutter</span><span>Dart</span><span>Hive</span><span>Provider</span>
+            </div>
+            <h3 class="project-name">ControlGastos</h3>
+            <p class="project-desc">
+              App móvil de finanzas personales — 100% local, sin servidores ni suscripciones. Controla tus gastos, presupuestos y quincena desde un diseño oscuro y elegante.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/evaldiviezosoft-ctrl/ControlGastos" target="_blank" rel="noopener" class="plink plink--gold" id="proj-controlgastos-github">Ver en GitHub</a>
+              <button class="plink plink-detail" onclick="openModal('controlgastos')" id="proj-controlgastos-detail">Ver detalles</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
+  <!-- ════════════════════ MODAL CONTROLGASTOS ════════════════════ -->
+  <div class="modal-backdrop" id="modal-controlgastos" role="dialog" aria-modal="true" aria-labelledby="modal-cg-title">
+    <div class="modal-panel">
+      <button class="modal-close" onclick="closeModal('controlgastos')" aria-label="Cerrar modal">✕</button>
 
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-icon">💰</div>
+        <div>
+          <div class="modal-badges-row">
+            <span class="modal-badge modal-badge--gold">Flutter 3.x</span>
+            <span class="modal-badge modal-badge--done">v1.0.0 · Completado</span>
+            <span class="modal-badge modal-badge--mobile">📱 Android / iOS</span>
+          </div>
+          <h2 class="modal-title" id="modal-cg-title">ControlGastos</h2>
+          <p class="modal-subtitle">Finanzas personales · Mercado peruano 🇵🇪</p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Descripción</h3>
+        <p class="modal-desc">
+          ControlGastos es una aplicación Flutter de gestión de finanzas personales diseñada para el mercado peruano. Permite registrar gastos organizados por categorías con presupuesto mensual, monitorear el saldo disponible en tiempo real y recibir alertas inteligentes antes de superar los límites — todo sin conexión a Internet, con almacenamiento 100% local usando Hive (NoSQL embebido). Incluye un sistema de quincena (pagos en días 13 y 28 de cada mes), autenticación biométrica, exportación de reportes PDF y backup completo en JSON.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Funcionalidades principales</h3>
+        <ul class="modal-features">
+          <li><span class="feature-emoji">📊</span><div><strong>Dashboard</strong> — Saldo real, tarjeta de quincena, cards de presupuesto por categoría con barra de progreso dinámica</div></li>
+          <li><span class="feature-emoji">💸</span><div><strong>Registro de gastos</strong> — Con categoría, subcategoría, fecha y foto de comprobante (galería o cámara)</div></li>
+          <li><span class="feature-emoji">🔍</span><div><strong>Búsqueda avanzada</strong> — Filtro por texto, categoría y rango de fechas dentro del mes</div></li>
+          <li><span class="feature-emoji">📁</span><div><strong>Categorías personalizadas</strong> — Emoji, color, límite de gasto, subcategorías y categorías fijas</div></li>
+          <li><span class="feature-emoji">📈</span><div><strong>Estadísticas</strong> — Gráfico de barras y dona mensual por categoría (fl_chart)</div></li>
+          <li><span class="feature-emoji">🔔</span><div><strong>Alertas automáticas</strong> — Notificación local al 70% y 90% del presupuesto (umbrales configurables)</div></li>
+          <li><span class="feature-emoji">📄</span><div><strong>Reporte PDF mensual</strong> — Con tabla de presupuestos y detalle de gastos, compartido desde el OS</div></li>
+          <li><span class="feature-emoji">💾</span><div><strong>Backup completo</strong> — Exportar/importar JSON con todos los datos (categorías, gastos, ajustes)</div></li>
+          <li><span class="feature-emoji">🔐</span><div><strong>Biometría</strong> — Login con huella dactilar o Face ID (con fallback a PIN)</div></li>
+          <li><span class="feature-emoji">📆</span><div><strong>Lógica de quincena</strong> — Calcula automáticamente el próximo día de pago (13 o 28), ajustando fines de semana a viernes anterior</div></li>
+        </ul>
+      </div>
+
+      <!-- Stack -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Stack tecnológico</h3>
+        <div class="modal-stack">
+          <span>Flutter 3.x</span><span>Dart 3.3+</span><span>Hive (NoSQL)</span><span>Provider</span>
+          <span>fl_chart</span><span>local_auth</span><span>pdf + printing</span>
+          <span>Google Fonts</span><span>flutter_local_notifications</span>
+        </div>
+      </div>
+
+      <!-- Architecture -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Arquitectura</h3>
+        <div class="modal-arch">
+          <div class="arch-pattern">Clean Architecture adaptada + Provider pattern</div>
+          <div class="arch-layers">
+            <div class="arch-layer"><code>models/</code> Modelos inmutables (Expense, Category)</div>
+            <div class="arch-layer"><code>providers/</code> Estado con ChangeNotifier</div>
+            <div class="arch-layer"><code>core/services/</code> Servicios isolados (Storage, Auth, PDF, Backup)</div>
+            <div class="arch-layer"><code>core/utils/</code> Utilidades (CurrencyUtils, PayrollUtils)</div>
+            <div class="arch-layer"><code>screens/</code> UI organizada por feature</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color palette -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Paleta de colores</h3>
+        <div class="modal-palette">
+          <div class="palette-swatch" style="background:#0B0B0C;"><span>#0B0B0C</span><small>Fondo</small></div>
+          <div class="palette-swatch" style="background:#1A1B1F;"><span>#1A1B1F</span><small>Surface</small></div>
+          <div class="palette-swatch" style="background:#D4AF37; color:#0B0B0C;"><span>#D4AF37</span><small>Gold</small></div>
+          <div class="palette-swatch" style="background:#F5E6C8; color:#0B0B0C;"><span>#F5E6C8</span><small>Texto</small></div>
+          <div class="palette-swatch" style="background:#2ECC71;"><span>#2ECC71</span><small>Success</small></div>
+          <div class="palette-swatch" style="background:#F39C12;"><span>#F39C12</span><small>Warning</small></div>
+          <div class="palette-swatch" style="background:#E74C3C;"><span>#E74C3C</span><small>Danger</small></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="modal-cta">
+        <a href="https://github.com/evaldiviezosoft-ctrl/ControlGastos" target="_blank" rel="noopener" class="btn btn-gold" id="modal-cg-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver en GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════ CONTACT ════════════════════ -->
   <section id="contact" class="section">
