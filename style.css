@@ -1410,3 +1410,50 @@ img { display: block; max-width: 100%; }
   .modal-icon { width: 56px; height: 56px; font-size: 2rem; }
   .palette-swatch { width: 64px; }
 }
+
+/* ─────────────────────────────────────────
+   CHEF IA — AMBER THEME MODIFIERS
+───────────────────────────────────────── */
+:root {
+  --amber:        #facc15;
+  --amber-2:      #eab308;
+  --amber-dim:    rgba(250, 204, 21, 0.18);
+  --amber-border: rgba(250, 204, 21, 0.35);
+  --amber-glow:   rgba(250, 204, 21, 0.4);
+}
+
+.project-card--amber {
+  border-color: var(--amber-border) !important;
+  background: linear-gradient(145deg, #0b0f19 0%, #080d1a 100%) !important;
+  box-shadow: 0 0 0 1px var(--amber-border), 0 8px 32px rgba(0,0,0,0.5);
+}
+.project-card--amber:hover {
+  border-color: var(--amber) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--amber), 0 0 40px var(--amber-dim) !important;
+}
+
+.featured-badge--amber { background: linear-gradient(135deg, var(--amber), var(--amber-2)) !important; color: #0b0f19 !important; }
+.project-overlay--amber { background: rgba(11,15,25,0.75) !important; }
+.project-link-btn--amber { background: linear-gradient(135deg, var(--amber), var(--amber-2)) !important; color: #0b0f19 !important; }
+.project-tags--amber span { background: rgba(250, 204, 21, 0.1) !important; border: 1px solid rgba(250, 204, 21, 0.3) !important; color: var(--amber) !important; }
+.plink--amber { color: var(--amber) !important; }
+.plink--amber:hover { color: var(--amber-2) !important; }
+
+/* Amber Modal Overrides */
+.modal-theme--amber .modal-panel { border-color: var(--amber-border); box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px var(--amber-border), 0 0 60px rgba(250,204,21,0.08); scrollbar-color: var(--amber-border) transparent; }
+.modal-theme--amber .modal-close:hover { border-color: var(--amber-border); color: var(--amber); background: rgba(250,204,21,0.08); }
+.modal-theme--amber .modal-header { border-bottom-color: rgba(250,204,21,0.15); }
+.modal-theme--amber .modal-icon { border-color: var(--amber-border); box-shadow: 0 0 24px rgba(250,204,21,0.18); }
+.modal-badge--amber { background: rgba(250, 204, 21, 0.15); color: var(--amber); border: 1px solid rgba(250, 204, 21, 0.3); }
+.modal-theme--amber .modal-title { background: linear-gradient(135deg, var(--amber), var(--amber-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.modal-theme--amber .modal-section-title { color: var(--amber); }
+.modal-theme--amber .modal-features li:hover { border-color: var(--amber-border); background: rgba(250,204,21,0.05); }
+.modal-stack--amber span { background: rgba(250, 204, 21, 0.08); border: 1px solid rgba(250, 204, 21, 0.25); color: var(--amber); }
+.modal-theme--amber .modal-arch { border-color: var(--amber-border); background: rgba(250, 204, 21, 0.04); }
+.modal-theme--amber .arch-pattern { background: rgba(250, 204, 21, 0.08); color: var(--amber); border-bottom-color: var(--amber-border); }
+.modal-theme--amber .arch-layer:hover { border-color: var(--amber); background: rgba(250, 204, 21, 0.04); }
+.modal-theme--amber .arch-layer code { color: var(--amber); }
+.modal-theme--amber .modal-cta { border-top-color: rgba(250, 204, 21, 0.15); }
+.btn-amber { display: inline-flex; align-items: center; gap: 10px; padding: 13px 30px; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--amber), var(--amber-2)); color: #0b0f19; font-weight: 700; font-size: 0.95rem; font-family: inherit; cursor: pointer; border: none; transition: all var(--transition); text-decoration: none; }
+.btn-amber:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--amber-glow); filter: brightness(1.08); }
+

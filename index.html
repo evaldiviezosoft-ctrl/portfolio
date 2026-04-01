@@ -326,7 +326,7 @@
               personalizados y sincronización entre base de datos local (Hive) y Firestore.
             </p>
             <div class="project-links">
-              <a href="#" class="plink" id="proj-p1-github">GitHub</a>
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Código Privado</span>
             </div>
           </div>
         </div>
@@ -350,7 +350,7 @@
               plugins configurados y optimización para todos los dispositivos.
             </p>
             <div class="project-links">
-              <a href="#" class="plink" id="proj-p2-github">GitHub</a>
+              <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-muted); display: flex; align-items: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Uso Interno</span>
             </div>
           </div>
         </div>
@@ -375,6 +375,33 @@
             </p>
             <div class="project-links">
               <a href="#" class="plink" id="proj-p3-github">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══ CHEF IA CARD ══ -->
+        <div class="project-card project-card--amber featured" data-animate id="card-chefia">
+          <div class="featured-badge featured-badge--amber">IA Integrada</div>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#0b0f19,#080d1a); border-bottom: 1px solid rgba(250,204,21,0.25);">
+              <span class="project-icon">👨‍🍳</span>
+              <div class="project-gold-glow" style="background: radial-gradient(ellipse 60% 50% at 50% 70%, rgba(250,204,21,0.12) 0%, transparent 70%);"></div>
+            </div>
+            <div class="project-overlay project-overlay--amber">
+              <button class="project-link-btn project-link-btn--amber" onclick="openModal('chefia')">Ver detalles →</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags project-tags--amber">
+              <span>Node.js</span><span>Express</span><span>Gemini AI</span><span>Vanilla JS</span>
+            </div>
+            <h3 class="project-name">Chef IA - Generador de Recetas</h3>
+            <p class="project-desc">
+              Un aplicativo impulsado por Inteligencia Artificial que analiza ingredientes sueltos para crear recetas culinarias precisas de forma instantánea.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/evaldiviezosoft-ctrl/AIRecetas" target="_blank" rel="noopener" class="plink plink--amber" id="proj-chefia-github">Ver en GitHub</a>
+              <button class="plink plink-detail" onclick="openModal('chefia')" id="proj-chefia-detail">Ver detalles</button>
             </div>
           </div>
         </div>
@@ -412,6 +439,95 @@
       </div>
     </div>
   </section>
+
+  <!-- ════════════════════ MODAL CHEF IA ════════════════════ -->
+  <div class="modal-backdrop modal-theme--amber" id="modal-chefia" role="dialog" aria-modal="true" aria-labelledby="modal-chefia-title">
+    <div class="modal-panel">
+      <button class="modal-close" onclick="closeModal('chefia')" aria-label="Cerrar modal">✕</button>
+
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-icon">🍳</div>
+        <div>
+          <div class="modal-badges-row">
+            <span class="modal-badge modal-badge--amber">Google Gemini AI</span>
+            <span class="modal-badge modal-badge--done">v1.0.0 · Completado</span>
+            <span class="modal-badge modal-badge--mobile">🌐 Web Full-Stack</span>
+          </div>
+          <h2 class="modal-title" id="modal-chefia-title">Chef IA - Generador de Recetas</h2>
+          <p class="modal-subtitle">Inteligencia Artificial · Herramienta Culinaria</p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Descripción</h3>
+        <p class="modal-desc">
+          Un aplicativo web Full-Stack impulsado por Inteligencia Artificial (Google Gemini 2.5-flash) que analiza ingredientes sueltos ingresados por el usuario para crear recetas culinarias precisas y estructuradas de forma instantánea. Destaca por su seguridad al manejar la API Key desde un backend Proxy en Express, un diseño UI inmersivo construido únicamente con CSS Puro y Vanilla JS, y el aprovechamiento avanzado del Structured Output JSON de Gemini para garantizar resultados impecables en todo momento.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Funcionalidades principales</h3>
+        <ul class="modal-features">
+          <li><span class="feature-emoji">🤖</span><div><strong>Generación IA por Gemini</strong> — Integración nativa con la API oficial de Google Gemini (2.5-flash).</div></li>
+          <li><span class="feature-emoji">🧩</span><div><strong>Control de Estructura JSON</strong> — Utilización nativa del Structured Output (Response Schemas) forzando que la IA siempre devuelva la receta en un objeto JSON limpio y parseable.</div></li>
+          <li><span class="feature-emoji">🛡️</span><div><strong>Backend Proxy en Node.js</strong> — Arquitectura segura con Express que protege y aísla la Gemini API Key, evitando su filtración en los navegadores de los clientes.</div></li>
+          <li><span class="feature-emoji">🌗</span><div><strong>Sistema "Dark Mode" Integrado</strong> — Soporte automático de tema oscuro y claro sincronizado con la preferencia del sistema más un Toggle manual mediante localStorage.</div></li>
+          <li><span class="feature-emoji">🎨</span><div><strong>Aesthetics y Componentes Modernos</strong> — Diseño UI inmersivo creado con CSS Puro (sin frameworks), usando tipografía Outfit y estructura de Cards.</div></li>
+          <li><span class="feature-emoji">⌛</span><div><strong>Estados Asíncronos Robustos</strong> — Botones bloqueados contra clics múltiples, loaders spinners personalizados y desactivación de inputs originada dentro de promesas fetch().</div></li>
+          <li><span class="feature-emoji">🚨</span><div><strong>Control de Errores Full-Stack</strong> — Flujos de mitigación ante API Keys inválidas o errores de comunicación con mensajes de alerta directos al DOM.</div></li>
+          <li><span class="feature-emoji">📱</span><div><strong>Diseño 100% Responsive</strong> — Interfaz acomodable a pantallas de escritorio y móvil basándose en Flexbox y Grid CSS nativo.</div></li>
+          <li><span class="feature-emoji">✨</span><div><strong>Implementación de Iconografía Ágil</strong> — Uso inyectable y optimizado mediante unpkg de la librería moderna Lucide Icons.</div></li>
+          <li><span class="feature-emoji">🚀</span><div><strong>Despliegue Configurado para Render</strong> — Estructurado para facilitar un montaje continuo remoto sin modificaciones mediante la gestión correcta de rutas internas e inyecciones de puertos de entorno.</div></li>
+        </ul>
+      </div>
+
+      <!-- Stack -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Stack tecnológico</h3>
+        <div class="modal-stack modal-stack--amber">
+          <span>HTML5</span><span>CSS3 (Puro)</span><span>Vanilla JS</span><span>Node.js</span>
+          <span>Express</span><span>Google Gemini API</span><span>dotenv</span><span>Lucide Icons</span>
+        </div>
+      </div>
+
+      <!-- Architecture -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Arquitectura Full-Stack</h3>
+        <div class="modal-arch">
+          <div class="arch-pattern">Cliente-Servidor (Proxy Backend)</div>
+          <div class="arch-layers">
+            <div class="arch-layer"><code>public/</code> Frontend Estático (HTML, CSS, JS, UI components)</div>
+            <div class="arch-layer"><code>server.js</code> Backend Express, gestión de puertos y env</div>
+            <div class="arch-layer"><code>/api/generate</code> Endpoint REST interno para abstraer llamadas a la IA</div>
+            <div class="arch-layer"><code>Gemini API</code> Servicio externo consumido solo por el Backend</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color palette -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Paleta de colores</h3>
+        <div class="modal-palette">
+          <div class="palette-swatch" style="background:#0B0F19;"><span>#0B0F19</span><small>Dark Bg</small></div>
+          <div class="palette-swatch" style="background:#1e293b;"><span>#1E293B</span><small>Surface</small></div>
+          <div class="palette-swatch" style="background:#facc15; color:#0b0f19;"><span>#FACC15</span><small>Amber</small></div>
+          <div class="palette-swatch" style="background:#eab308; color:#0b0f19;"><span>#EAB308</span><small>Gold Accent</small></div>
+          <div class="palette-swatch" style="background:#f8fafc; color:#0b0f19;"><span>#F8FAFC</span><small>Text Light</small></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="modal-cta">
+        <a href="https://github.com/evaldiviezosoft-ctrl/AIRecetas" target="_blank" rel="noopener" class="btn btn-amber" id="modal-chefia-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver en GitHub
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ════════════════════ MODAL CONTROLGASTOS ════════════════════ -->
   <div class="modal-backdrop" id="modal-controlgastos" role="dialog" aria-modal="true" aria-labelledby="modal-cg-title">
