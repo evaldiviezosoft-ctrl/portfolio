@@ -436,6 +436,32 @@
           </div>
         </div>
 
+        <!-- ══ CONTROLGASTOS LANDING PAGE CARD ══ -->
+        <div class="project-card project-card--emerald featured" data-animate id="card-cg-landing">
+          <div class="featured-badge featured-badge--emerald">Landing Page</div>
+          <div class="project-img-wrap">
+            <div class="project-img" style="background: linear-gradient(135deg,#050a12,#080d1a); border-bottom: 1px solid rgba(16,217,160,0.3);">
+              <span class="project-icon">🌐</span>
+              <div class="project-gold-glow" style="background: radial-gradient(ellipse 60% 50% at 50% 70%, rgba(16,217,160,0.12) 0%, transparent 70%);"></div>
+            </div>
+            <div class="project-overlay project-overlay--emerald">
+              <button class="project-link-btn project-link-btn--emerald" onclick="openModal('cg-landing')">Ver detalles &rarr;</button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags project-tags--emerald">
+              <span>HTML5</span><span>Vanilla CSS</span><span>JavaScript</span><span>SEO</span><span>Formspree</span>
+            </div>
+            <h3 class="project-name">ControlGastos — Landing Page</h3>
+            <p class="project-desc">
+              Landing page SEO-optimizada y desarrollo de app m&oacute;vil financiera. ControlGastos calcula el saldo real disponible del usuario hasta su pr&oacute;xima quincena, controlando gastos hormiga con enfoque 100% offline y privado.
+            </p>
+            <div class="project-links">
+              <button class="plink plink--emerald plink-detail" onclick="openModal('cg-landing')" id="proj-cglanding-detail">Ver detalles</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -615,6 +641,102 @@
       <!-- CTA -->
       <div class="modal-cta">
         <a href="https://github.com/evaldiviezosoft-ctrl/ControlGastos" target="_blank" rel="noopener" class="btn btn-gold" id="modal-cg-github">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Ver en GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ MODAL CONTROLGASTOS LANDING PAGE ════════════════════ -->
+  <div class="modal-backdrop modal-theme--emerald" id="modal-cg-landing" role="dialog" aria-modal="true" aria-labelledby="modal-cgl-title">
+    <div class="modal-panel">
+      <button class="modal-close" onclick="closeModal('cg-landing')" aria-label="Cerrar modal">&times;</button>
+
+      <!-- Header -->
+      <div class="modal-header">
+        <div class="modal-icon">🌐</div>
+        <div>
+          <div class="modal-badges-row">
+            <span class="modal-badge modal-badge--emerald">Landing Page</span>
+            <span class="modal-badge modal-badge--done">En Producci&oacute;n</span>
+            <span class="modal-badge modal-badge--violet">&#128241; Flutter App</span>
+          </div>
+          <h2 class="modal-title" id="modal-cgl-title">ControlGastos — Landing Page</h2>
+          <p class="modal-subtitle">Simulador financiero offline &amp; Landing Page de alta conversi&oacute;n</p>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Descripci&oacute;n</h3>
+        <p class="modal-desc">
+          Landing page SEO-optimizada que representa y promociona la app m&oacute;vil <strong>ControlGastos</strong>. El sitio web comunica una propuesta de valor &uacute;nica: un simulador financiero que calcula el saldo real disponible del usuario hasta su pr&oacute;xima quincena, controlando los gastos hormiga con un enfoque 100% offline y privado. Construida con arquitectura Vanilla de ultra alto rendimiento sin frameworks pesados, orientada a la conversi&oacute;n de leads para la Beta Privada.
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Caracter&iacute;sticas clave</h3>
+        <ul class="modal-features">
+          <li><span class="feature-emoji">&#128269;</span><div><strong>Desempe&ntilde;o y SEO</strong> &mdash; Arquitectura Vanilla ultra r&aacute;pida sin frameworks pesados. Meta-etiquetas Open Graph, Rich Snippets (Schema.org) y dise&ntilde;o 100% responsive orientado a la conversi&oacute;n de leads (Beta Privada).</div></li>
+          <li><span class="feature-emoji">&#128274;</span><div><strong>Privacidad y Offline-First</strong> &mdash; Los datos financieros nunca tocan la nube; se almacenan localmente en el dispositivo mediante Hive DB, garantizando privacidad total y funcionamiento sin internet.</div></li>
+          <li><span class="feature-emoji">&#128200;</span><div><strong>Proyecci&oacute;n de Saldo Inteligente</strong> &mdash; El algoritmo resta los gastos fijos y recurrentes diarios desde el d&iacute;a actual hasta la pr&oacute;xima fecha de pago variable, revelando el l&iacute;mite real de gasto diario.</div></li>
+          <li><span class="feature-emoji">&#128178;</span><div><strong>Control de Gastos Hormiga</strong> &mdash; Interfaz optimizada para el rastreo de micro-transacciones, con presupuestos por subcategor&iacute;as y alertas visuales cuando se aproxima el l&iacute;mite.</div></li>
+          <li><span class="feature-emoji">&#128231;</span><div><strong>Captaci&oacute;n de Leads &mdash; Formspree</strong> &mdash; Sistema simple de recolecci&oacute;n de leads (formulario de acceso a la Beta) mediante Formspree, sin necesidad de backend propio.</div></li>
+          <li><span class="feature-emoji">&#127763;</span><div><strong>Dark UI con Micro-interacciones CSS</strong> &mdash; Dise&ntilde;o oscuro y sofisticado con micro-interacciones sutiles implementadas en CSS puro para mantener un peso de p&aacute;gina m&iacute;nimo y una experiencia premium.</div></li>
+        </ul>
+      </div>
+
+      <!-- Stack -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Stack tecnol&oacute;gico</h3>
+        <div class="modal-stacks-dual">
+          <div class="modal-stack-group">
+            <h4>&#127760; Landing Page</h4>
+            <div class="modal-stack modal-stack--emerald">
+              <span>HTML5 Sem&aacute;ntico</span><span>Vanilla CSS</span><span>Custom Properties</span>
+              <span>Flexbox / Grid</span><span>JavaScript</span><span>SEO / OpenGraph</span>
+              <span>Schema.org</span><span>Formspree</span>
+            </div>
+          </div>
+          <div class="modal-stack-group">
+            <h4>&#128241; App M&oacute;vil</h4>
+            <div class="modal-stack modal-stack--violet">
+              <span>Flutter</span><span>Dart</span><span>Hive DB</span>
+              <span>Provider</span><span>Clean Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architecture & Challenges -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Arquitectura y Retos</h3>
+        <div class="modal-arch">
+          <div class="arch-pattern">Vanilla / Offline-First / Lead Generation</div>
+          <div class="arch-layers">
+            <div class="arch-layer"><code>Landing Page</code> HTML5 sem&aacute;ntico + CSS puro con Custom Properties y micro-animaciones</div>
+            <div class="arch-layer"><code>SEO Layer</code> Meta Open Graph, Rich Snippets Schema.org, heading hierarchy optimizada</div>
+            <div class="arch-layer"><code>Leads Form</code> Integraci&oacute;n con Formspree Webhook, sin backend propio</div>
+            <div class="arch-layer"><code>App Layer</code> Flutter + Hive DB (NoSQL local) + Provider para el estado</div>
+            <div class="arch-layer"><code>Algoritmo</code> C&aacute;lculo de saldo real: gastos fijos + recurrentes diarios proyectados hasta la quincena</div>
+          </div>
+        </div>
+        <p class="modal-desc" style="margin-top:16px;">
+          El principal desaf&iacute;o fue dise&ntilde;ar una landing page capaz de transmitir un modelo mental financiero diferente (cobros asim&eacute;tricos, no siempre el d&iacute;a 1). Se logr&oacute; dise&ntilde;ando una UI oscura y sofisticada con micro-interacciones sutiles en CSS puro para mantener un peso m&iacute;nimo. En la app, el reto t&eacute;cnico fue establecer una base de datos local robusta con Hive y Provider para que los c&aacute;lculos de saldos diarios se hicieran instant&aacute;neamente de manera offline.
+        </p>
+      </div>
+
+      <!-- Rol -->
+      <div class="modal-section">
+        <h3 class="modal-section-title">Rol en el proyecto</h3>
+        <p class="modal-desc">&#128104;&#8205;&#128187; <strong>Frontend &amp; Mobile Developer</strong> &mdash; Dise&ntilde;o visual, arquitectura de la landing, optimizaci&oacute;n SEO, integraci&oacute;n de Formspree y desarrollo completo de la app m&oacute;vil Flutter.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="modal-cta">
+        <a href="https://github.com/evaldiviezosoft-ctrl/ControlGastos" target="_blank" rel="noopener" class="btn btn-emerald" id="modal-cgl-github">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           Ver en GitHub
         </a>

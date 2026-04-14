@@ -1457,3 +1457,151 @@ img { display: block; max-width: 100%; }
 .btn-amber { display: inline-flex; align-items: center; gap: 10px; padding: 13px 30px; border-radius: var(--radius-sm); background: linear-gradient(135deg, var(--amber), var(--amber-2)); color: #0b0f19; font-weight: 700; font-size: 0.95rem; font-family: inherit; cursor: pointer; border: none; transition: all var(--transition); text-decoration: none; }
 .btn-amber:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--amber-glow); filter: brightness(1.08); }
 
+
+/* ─────────────────────────────────────────
+   CONTROLGASTOS LANDING PAGE — EMERALD / FINTECH THEME
+───────────────────────────────────────── */
+:root {
+  --emerald:        #10d9a0;
+  --emerald-2:      #06c48a;
+  --emerald-3:      #7c3aed;
+  --emerald-dim:    rgba(16, 217, 160, 0.15);
+  --emerald-border: rgba(16, 217, 160, 0.32);
+  --emerald-glow:   rgba(16, 217, 160, 0.4);
+}
+
+.project-card--emerald {
+  border-color: var(--emerald-border) !important;
+  background: linear-gradient(145deg, #080d1a 0%, #050a12 100%) !important;
+  box-shadow: 0 0 0 1px var(--emerald-border), 0 8px 32px rgba(0,0,0,0.5);
+}
+.project-card--emerald:hover {
+  border-color: var(--emerald) !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px var(--emerald), 0 0 50px var(--emerald-dim) !important;
+}
+
+.featured-badge--emerald {
+  background: linear-gradient(135deg, var(--emerald), var(--emerald-3)) !important;
+  color: #fff !important;
+}
+
+.project-overlay--emerald { background: rgba(5,10,18,0.78) !important; }
+
+.project-link-btn--emerald {
+  background: linear-gradient(135deg, var(--emerald), var(--emerald-3)) !important;
+  color: #fff !important;
+}
+
+.project-tags--emerald span {
+  background: rgba(16, 217, 160, 0.08) !important;
+  border: 1px solid rgba(16, 217, 160, 0.28) !important;
+  color: var(--emerald) !important;
+}
+
+.plink--emerald { color: var(--emerald) !important; }
+.plink--emerald:hover { color: var(--emerald-2) !important; }
+.plink--emerald::after { content: '↗'; font-size: 0.75rem; }
+
+/* Emerald Modal Overrides */
+.modal-theme--emerald .modal-panel {
+  border-color: var(--emerald-border);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px var(--emerald-border), 0 0 70px rgba(16,217,160,0.07);
+  scrollbar-color: var(--emerald-border) transparent;
+}
+.modal-theme--emerald .modal-close:hover {
+  border-color: var(--emerald-border);
+  color: var(--emerald);
+  background: rgba(16,217,160,0.08);
+}
+.modal-theme--emerald .modal-header { border-bottom-color: rgba(16,217,160,0.15); }
+.modal-theme--emerald .modal-icon {
+  border-color: var(--emerald-border);
+  background: linear-gradient(135deg, #080d1a, #050a12);
+  box-shadow: 0 0 28px rgba(16,217,160,0.2);
+}
+.modal-badge--emerald {
+  background: rgba(16, 217, 160, 0.12);
+  color: var(--emerald);
+  border: 1px solid rgba(16, 217, 160, 0.3);
+}
+.modal-badge--violet {
+  background: rgba(124, 58, 237, 0.12);
+  color: #a78bfa;
+  border: 1px solid rgba(124, 58, 237, 0.3);
+}
+.modal-theme--emerald .modal-title {
+  background: linear-gradient(135deg, var(--emerald), var(--emerald-3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.modal-theme--emerald .modal-section-title { color: var(--emerald); }
+.modal-theme--emerald .modal-features li:hover {
+  border-color: var(--emerald-border);
+  background: rgba(16,217,160,0.04);
+}
+.modal-stack--emerald span {
+  background: rgba(16, 217, 160, 0.07);
+  border: 1px solid rgba(16, 217, 160, 0.22);
+  color: var(--emerald);
+}
+.modal-stack--violet span {
+  background: rgba(124, 58, 237, 0.07);
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  color: #a78bfa;
+}
+.modal-theme--emerald .modal-arch {
+  border-color: var(--emerald-border);
+  background: rgba(16,217,160,0.03);
+}
+.modal-theme--emerald .arch-pattern {
+  background: rgba(16,217,160,0.07);
+  color: var(--emerald);
+  border-bottom-color: var(--emerald-border);
+}
+.modal-theme--emerald .arch-layer:hover {
+  border-color: var(--emerald);
+  background: rgba(16,217,160,0.04);
+}
+.modal-theme--emerald .arch-layer code { color: var(--emerald); }
+.modal-theme--emerald .modal-cta { border-top-color: rgba(16,217,160,0.15); }
+
+.btn-emerald {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 30px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--emerald), var(--emerald-3));
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.btn-emerald:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px var(--emerald-glow);
+  filter: brightness(1.08);
+}
+
+/* Two-stack grid for Landing + Mobile inside emerald modal */
+.modal-stacks-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.modal-stack-group h4 {
+  font-size: 0.72rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+@media (max-width: 560px) {
+  .modal-stacks-dual { grid-template-columns: 1fr; }
+}
