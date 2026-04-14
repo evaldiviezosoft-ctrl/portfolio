@@ -3,11 +3,11 @@
 ───────────────────────────────────────── */
 :root {
   --bg:          #080d1a;
-  --bg-alt:      #0c1225;
-  --surface:     rgba(255,255,255,0.04);
-  --surface-h:   rgba(255,255,255,0.08);
-  --border:      rgba(255,255,255,0.08);
-  --border-h:    rgba(255,255,255,0.18);
+  --bg-alt:      rgba(12, 18, 37, 0.78);
+  --surface:     rgba(255,255,255,0.05);
+  --surface-h:   rgba(255,255,255,0.09);
+  --border:      rgba(255,255,255,0.09);
+  --border-h:    rgba(255,255,255,0.20);
 
   --accent:      #6366f1;
   --accent-2:    #8b5cf6;
@@ -38,7 +38,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
 
 body {
   font-family: 'Outfit', sans-serif;
-  background: var(--bg);
+  background: #080d1a;
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
@@ -154,6 +154,77 @@ img { display: block; max-width: 100%; }
 }
 
 /* ─────────────────────────────────────────
+   GLOBAL AURORA — fixed behind all sections
+───────────────────────────────────────── */
+.aurora-global {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #080d1a;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Individual orbs — each animates independently for organic feel */
+.aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  will-change: transform, opacity;
+}
+
+.aurora-orb--1 {
+  width: 75vw; height: 70vh;
+  top: -20vh; left: -15vw;
+  background: radial-gradient(ellipse, rgba(99,102,241,0.32) 0%, transparent 70%);
+  animation: orb1 14s ease-in-out infinite alternate;
+}
+.aurora-orb--2 {
+  width: 65vw; height: 65vh;
+  bottom: -15vh; right: -10vw;
+  background: radial-gradient(ellipse, rgba(6,182,212,0.26) 0%, transparent 70%);
+  animation: orb2 18s ease-in-out infinite alternate;
+}
+.aurora-orb--3 {
+  width: 55vw; height: 55vh;
+  top: 30vh; left: 30vw;
+  background: radial-gradient(ellipse, rgba(139,92,246,0.22) 0%, transparent 70%);
+  animation: orb3 22s ease-in-out infinite alternate;
+}
+.aurora-orb--4 {
+  width: 40vw; height: 45vh;
+  top: 10vh; right: 5vw;
+  background: radial-gradient(ellipse, rgba(16,217,160,0.16) 0%, transparent 70%);
+  animation: orb4 16s ease-in-out infinite alternate;
+}
+
+@keyframes orb1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(8vw, 12vh) scale(1.12); }
+  100% { transform: translate(18vw, 5vh) scale(0.95); }
+}
+@keyframes orb2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-10vw, -8vh) scale(1.08); }
+  100% { transform: translate(-5vw, -18vh) scale(1.15); }
+}
+@keyframes orb3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(-12vw, 8vh) scale(1.1); }
+  66%  { transform: translate(8vw, -10vh) scale(0.92); }
+  100% { transform: translate(-6vw, 14vh) scale(1.06); }
+}
+@keyframes orb4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-14vw, 10vh) scale(1.2); }
+  100% { transform: translate(-8vw, 18vh) scale(0.88); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aurora-orb { animation: none; }
+}
+
+/* ─────────────────────────────────────────
    HERO
 ───────────────────────────────────────── */
 #hero {
@@ -164,21 +235,29 @@ img { display: block; max-width: 100%; }
   overflow: hidden;
 }
 
+/* Aurora mesh background */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 20% 40%, rgba(99,102,241,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(6,182,212,0.12) 0%, transparent 60%),
-    url('hero_bg.png') center/cover no-repeat;
+  /* Lighter overlay in hero so the global aurora reads brightest here */
+  background: linear-gradient(
+    to bottom,
+    rgba(8,13,26,0.0) 0%,
+    rgba(8,13,26,0.45) 60%,
+    rgba(8,13,26,0.95) 100%
+  );
   z-index: 0;
 }
+
+/* Subtle dot-grid texture on top */
 .hero-bg::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(8,13,26,0.3) 0%, rgba(8,13,26,0.7) 60%, var(--bg) 100%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") repeat;
+  pointer-events: none;
 }
+
 
 .hero-particles {
   position: absolute;
@@ -190,16 +269,20 @@ img { display: block; max-width: 100%; }
 .particle {
   position: absolute;
   border-radius: 50%;
-  background: var(--accent);
   opacity: 0;
   animation: float-particle linear infinite;
+  /* colors assigned per-particle in JS */
 }
 
 @keyframes float-particle {
-  0%   { transform: translateY(100vh) scale(0); opacity: 0; }
-  10%  { opacity: 0.7; }
-  90%  { opacity: 0.4; }
-  100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+  0%   { transform: translateY(100vh) scale(0);   opacity: 0; }
+  10%  { opacity: 0.65; }
+  90%  { opacity: 0.35; }
+  100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle { animation: none; display: none; }
 }
 
 .hero-content {
@@ -343,7 +426,11 @@ img { display: block; max-width: 100%; }
    SECTIONS
 ───────────────────────────────────────── */
 .section { padding: 100px 0; }
-.section-alt { background: var(--bg-alt); }
+/* Semi-transparent so the global aurora bleeds through */
+.section-alt {
+  background: rgba(12, 18, 37, 0.72);
+  backdrop-filter: blur(0px);
+}
 
 .section-label {
   display: inline-block;
@@ -955,7 +1042,9 @@ img { display: block; max-width: 100%; }
 .footer {
   padding: 28px 32px;
   border-top: 1px solid var(--border);
-  background: var(--bg-alt);
+  background: rgba(8, 13, 26, 0.82);
+  position: relative;
+  z-index: 1;
 }
 
 .footer-inner {
@@ -1445,7 +1534,7 @@ img { display: block; max-width: 100%; }
 .modal-theme--amber .modal-header { border-bottom-color: rgba(250,204,21,0.15); }
 .modal-theme--amber .modal-icon { border-color: var(--amber-border); box-shadow: 0 0 24px rgba(250,204,21,0.18); }
 .modal-badge--amber { background: rgba(250, 204, 21, 0.15); color: var(--amber); border: 1px solid rgba(250, 204, 21, 0.3); }
-.modal-theme--amber .modal-title { background: linear-gradient(135deg, var(--amber), var(--amber-2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.modal-theme--amber .modal-title { background: linear-gradient(135deg, var(--amber), var(--amber-2)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .modal-theme--amber .modal-section-title { color: var(--amber); }
 .modal-theme--amber .modal-features li:hover { border-color: var(--amber-border); background: rgba(250,204,21,0.05); }
 .modal-stack--amber span { background: rgba(250, 204, 21, 0.08); border: 1px solid rgba(250, 204, 21, 0.25); color: var(--amber); }

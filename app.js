@@ -52,7 +52,7 @@ navMenu.querySelectorAll('.nav-link').forEach(link => {
   const container = document.getElementById('particles');
   if (!container) return;
 
-  const colors = ['#6366f1','#8b5cf6','#06b6d4','#4ade80','#f59e0b'];
+  const colors = ['#6366f1','#8b5cf6','#06b6d4','#10d9a0','#a78bfa','#22d3ee'];
 
   for (let i = 0; i < 28; i++) {
     const p = document.createElement('span');
