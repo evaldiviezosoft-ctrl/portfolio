@@ -1,0 +1,52 @@
+﻿## UI Pro Max Search Results
+**Domain:** style | **Query:** hero background animated dark gradient mesh
+**Source:** styles.csv | **Found:** 3 results
+
+### Result 1
+- **Style Category:** Aurora UI
+- **Type:** General
+- **Keywords:** Vibrant gradients, smooth blend, Northern Lights effect, mesh gradient, luminous, atmospheric, abstract
+- **Primary Colors:** Complementary: Blue-Orange, Purple-Yellow, Electric Blue #0080FF, Magenta #FF1493, Cyan #00FFFF
+- **Effects & Animation:** Large flowing CSS/SVG gradients, subtle 8-12s animations, depth via color layering, smooth morph
+- **Best For:** Modern SaaS, creative agencies, branding, music platforms, lifestyle, premium products, hero sections
+- **Performance:** ÔÜá Good
+- **Accessibility:** ÔÜá Text contrast
+- **Framework Compatibility:** Tailwind 9/10, CSS-in-JS 10/10
+- **Complexity:** Medium
+- **AI Prompt Keywords:** Create a vibrant gradient interface inspired by Northern Lights with mesh gradients, smooth color blends, flowing animations. Use complementary color pairs (blue-orange, purple-yellow), flowing background gradients, subtle continuous animations (8-12s loops), iridescent effects.
+- **CSS/Technical Keywords:** background: conic-gradient or radial-gradient with multiple stops, animation: @keyframes gradient (8-12s), background-size: 200% 200%, filter: saturate(1.2), blend-mode: screen or multiply
+- **Implementation Checklist:** ÔÿÉ Mesh/flowing gradients applied, ÔÿÉ 8-12s animation loop, ÔÿÉ Complementary colors used, ÔÿÉ Smooth color transitions, ÔÿÉ Iridescent effect subtle, ÔÿÉ Text contrast verified
+- **Design System Variables:** --gradient-colors: complementary pairs, --animation-duration: 8-12s, --blend-mode: screen, --color-saturation: 1.2, --effect: iridescent, --loop-smooth: true
+
+### Result 2
+- **Style Category:** Gradient Mesh / Aurora Evolved
+- **Type:** General
+- **Keywords:** Complex gradients, mesh gradients, multi-color blend, aurora effect, flowing colors, iridescent, holographic, prismatic
+- **Primary Colors:** Multi-stop gradients: Cyan #00FFFF, Magenta #FF00FF, Yellow #FFFF00, Blue #0066FF, Green #00FF66
+- **Effects & Animation:** CSS mesh-gradient (experimental), SVG gradients, canvas gradients, smooth color morphing, flowing animation
+- **Best For:** Hero sections, backgrounds, creative brands, music platforms, fashion, lifestyle, premium products
+- **Performance:** ÔÜá Good
+- **Accessibility:** ÔÜá Text contrast
+- **Framework Compatibility:** CSS 8/10, SVG 10/10, Canvas 10/10
+- **Complexity:** Medium
+- **AI Prompt Keywords:** Design with gradient mesh aurora effect. Use: multi-color mesh gradients, flowing color transitions, aurora/northern lights feel, iridescent overlays, holographic shimmer, prismatic effects, smooth color morphing.
+- **CSS/Technical Keywords:** background: conic-gradient or mesh (SVG), animation: gradient flow (background-position), filter: hue-rotate for shimmer, mix-blend-mode: screen, canvas for complex mesh, multiple gradient layers
+- **Implementation Checklist:** ÔÿÉ Mesh gradient visible, ÔÿÉ Colors flow smoothly, ÔÿÉ Aurora effect achieved, ÔÿÉ Performance acceptable, ÔÿÉ Text remains readable, ÔÿÉ Mobile renders ok
+- **Design System Variables:** --mesh-color-1: #00FFFF, --mesh-color-2: #FF00FF, --mesh-color-3: #FFFF00, --mesh-color-4: #00FF66, --flow-duration: 10s, --shimmer-intensity: 0.3
+
+### Result 3
+- **Style Category:** Kinetic Typography
+- **Type:** General
+- **Keywords:** Motion text, animated type, moving letters, dynamic, typing effect, morphing, scroll-triggered text
+- **Primary Colors:** Flexible - high contrast recommended, bold colors for emphasis, animation-friendly palette
+- **Effects & Animation:** @keyframes text animation, typing effect, background-clip: text, GSAP ScrollTrigger, split text
+- **Best For:** Hero sections, marketing sites, video platforms, storytelling, creative portfolios, landing pages
+- **Performance:** ÔÜá Moderate
+- **Accessibility:** ÔØî Poor (motion)
+- **Framework Compatibility:** GSAP 10/10, Framer Motion 10/10
+- **Complexity:** High
+- **AI Prompt Keywords:** Design with kinetic typography. Use: animated text, scroll-triggered reveals, typing effects, letter-by-letter animations, morphing text, gradient text fills, oversized hero text, text as the main visual element.
+- **CSS/Technical Keywords:** @keyframes for text animation, background-clip: text, GSAP SplitText, typing effect (steps()), transform on letters, scroll-triggered (Intersection Observer), variable fonts for morphing
+- **Implementation Checklist:** ÔÿÉ Text animations smooth, ÔÿÉ Prefers-reduced-motion respected, ÔÿÉ Fallback for no-JS, ÔÿÉ Mobile performance ok, ÔÿÉ Typing effect timed, ÔÿÉ Scroll triggers work
+- **Design System Variables:** --text-animation-duration: 1s, --letter-delay: 0.05s, --typing-speed: 100ms, --gradient-text: linear-gradient(90deg, #color1, #color2), --morph-duration: 0.5s
+
