@@ -50,6 +50,21 @@ img { display: block; max-width: 100%; }
 
 ::selection { background: var(--accent); color: #fff; }
 
+.skip-link {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 999;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  transform: translateY(-140%);
+  transition: transform var(--transition);
+}
+.skip-link:focus { transform: translateY(0); }
+
 /* scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -398,6 +413,12 @@ img { display: block; max-width: 100%; }
 
 .btn-full { width: 100%; justify-content: center; }
 
+.btn-disabled {
+  cursor: default;
+  opacity: 0.78;
+  pointer-events: none;
+}
+
 /* scroll hint */
 .hero-scroll-hint {
   display: flex;
@@ -745,6 +766,13 @@ img { display: block; max-width: 100%; }
 }
 .project-card:hover .project-link-btn { transform: translateY(0); }
 
+.project-link-btn--muted {
+  background: rgba(8, 13, 26, 0.82);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: default;
+}
+
 .project-info { padding: 24px 24px 20px; }
 
 .project-tags {
@@ -779,6 +807,8 @@ img { display: block; max-width: 100%; }
 
 .project-links {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 16px;
 }
 
@@ -795,6 +825,11 @@ img { display: block; max-width: 100%; }
 .plink:hover { color: var(--text); }
 .plink-demo { color: var(--accent); }
 .plink-demo:hover { color: #818cf8; }
+.plink-private {
+  color: var(--text-muted);
+  cursor: default;
+}
+.plink-private::after { content: ''; }
 
 /* ─────────────────────────────────────────
    CLIENT PROJECTS
